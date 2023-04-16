@@ -43,6 +43,12 @@ class HelloWorld(Resource):
 
 api.add_resource(HelloWorld,'/hello')
 
+class Home(Resource):
+	def get(self):
+		data = "Home page"
+		return data
+
+api.add_resource(Home,'/')
 
 if __name__=='__main__':
 	app.run(debug=True)
